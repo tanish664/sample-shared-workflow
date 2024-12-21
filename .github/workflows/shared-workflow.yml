@@ -8,7 +8,3 @@ on:
 jobs:
   call-docker-workflow:
     uses: tanish664/sample/.github/workflows/docker-build.yml@main
-    with:
-      dockerhub_username: ${{ secrets.DOCKERHUB_USERNAME }}
-      dockerhub_access_token: ${{ secrets.DOCKERHUB_ACCESS_TOKEN }}
-      image_name: 'yourapp'
