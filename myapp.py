@@ -13,7 +13,7 @@ def find_primes(n):
     
     return [num for num in range(2, n + 1) if is_prime[num]]
 
-# Example usage
+
 def main():
     limit = 50
     primes = find_primes(limit)
