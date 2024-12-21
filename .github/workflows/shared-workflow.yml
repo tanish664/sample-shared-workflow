@@ -1,13 +1,12 @@
-name: Trigger Docker Build Push in Sample Repo
+name: Docker Build Trigger
 
 on:
   push:
-    branches:
-      - main  
+    branches: [ main ]
 
 jobs:
-  trigger-docker-build:
-    uses: tanish664/sample/.github/workflows/docker-build.yml@main  
-    with:
-      dockerhub_username: ${{ secrets.DOCKERHUB_USERNAME }}
-      dockerhub_access_token: ${{ secrets.DOCKERHUB_ACCESS_TOKEN }}
+  call-docker-workflow:
+    uses: owner/repo1/.github/workflows/docker-build-push.yml@main
+    secrets:
+      DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+      DOCKERHUB_ACCESS_TOKEN: ${{ secrets.DOCKERHUB_ACCESS_TOKEN }}
