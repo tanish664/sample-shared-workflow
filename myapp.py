@@ -18,7 +18,7 @@ def main():
     limit = 50
     primes = find_primes(limit)
     print(f"Prime numbers up to {limit}:")
-    print(primes)
+
     
     # Additional demonstration of prime number properties
     print(f"\nTotal number of primes found: {len(primes)}")
