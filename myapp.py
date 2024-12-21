@@ -15,7 +15,7 @@ def find_primes(n):
 
 # Example usage
 def main():
-    limit = 50
+    limit = 501
     primes = find_primes(limit)
     print(f"Prime numbers up to {limit}:")
     print(primes)
